@@ -15,17 +15,17 @@ export default {
 }
 </script>
 <template>
-    <header class="d-flex ">
+    <header class="d-flex justify-content-between align-items-center container-xl">
         <div class="logo_container">
             <img class="main_logo" src="../assets/img/images/dark-logo.png" alt="Main_logo">
         </div>
         <MainMenu />
 
         <div class="social_links">
-            <font-awesome-icon :icon="['fab', 'twitter']" />
-            <font-awesome-icon :icon="['fab', 'facebook']" />
-            <font-awesome-icon :icon="['fab', 'instagram']" />
-            <font-awesome-icon :icon="['fab', 'linkedin']" />
+            <font-awesome-icon :icon="['fab', 'twitter']" class="mx-2" />
+            <font-awesome-icon :icon="['fab', 'facebook']" class="mx-2" />
+            <font-awesome-icon :icon="['fab', 'instagram']" class="mx-2" />
+            <font-awesome-icon :icon="['fab', 'linkedin']" class="mx-2" />
         </div>
     </header>
 </template>

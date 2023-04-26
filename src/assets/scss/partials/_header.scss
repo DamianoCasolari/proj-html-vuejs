@@ -1,0 +1,15 @@
+@use "./variables" as *;
+@use "./utility_selectors.scss" as *;
+
+
+header {
+    height: 80px;
+
+    .main_logo {
+        width: 150px;
+    }
+
+    .social_links {
+        color: $clr_dusty_gray;
+    }
+}
