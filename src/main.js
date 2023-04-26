@@ -1,5 +1,13 @@
 import { createApp } from 'vue'
-import './style.css'
+import './assets/scss/app.scss'
 import App from './App.vue'
 
-createApp(App).mount('#app')
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faUser, faEnvelope, faStar, faSearch, faBell, faSun, faCloudMoon, faMoon } from '@fortawesome/free-solid-svg-icons';
+import { faFacebook, faTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
+
+library.add(faUser, faEnvelope, faStar, faFacebook, faTwitter, faInstagram, faLinkedin, faSearch, faBell, faSun, faCloudMoon, faMoon);
+
+
+createApp(App).component('font-awesome-icon', FontAwesomeIcon).mount('#app')
