@@ -11,10 +11,14 @@ export default {
 
 
 <template>
-    <div>
+    <div class="countdown">
 
     </div>
 </template>
 
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.countdown {
+    height: 50px;
+}
+</style>

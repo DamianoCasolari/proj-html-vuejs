@@ -15,9 +15,9 @@ export default {
 }
 </script>
 <template>
-    <header>
+    <header class="d-flex ">
         <div class="logo_container">
-            <img class="main_logo" src="" alt="">
+            <img class="main_logo" src="../assets/img/images/dark-logo.png" alt="Main_logo">
         </div>
         <MainMenu />
 
