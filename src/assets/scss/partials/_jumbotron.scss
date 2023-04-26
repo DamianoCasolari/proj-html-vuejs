@@ -2,10 +2,36 @@
 @use "./utility_selectors.scss" as *;
 
 .jumbotron {
-    height: 700px;
+    height: 600px;
     background-color: $clr_banner_middle;
-    // border: 1px solid black;
+    background-image: url("../../assets/img/images/artist-shape-02-600x324.png"), url("../../assets/img/images/artist-shape-01-600x577.png");
+    background-position: top left, bottom right;
+    background-repeat: no-repeat;
     padding: 30px 0;
+
+    .middle_side {
+
+
+        .title_banner {
+            font-weight: 900;
+            word-wrap: break-word;
+        }
+
+        .started_today {
+            background-color: $clr_juice_button;
+            color: $clr_primary_light;
+            margin: 20px;
+            padding: 10px 25px;
+            font-weight: 600;
+            font-size: calc(12px + 0.1vw);
+            border-radius: 4px;
+            border: none;
+
+        }
+
+    }
+
+
 
     .left_side {
 
@@ -24,7 +50,6 @@
             img {
                 width: 100%;
                 position: absolute;
-                // transform: translateY(-100%);
             }
 
             .shape_heavenly {

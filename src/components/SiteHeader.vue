@@ -19,7 +19,7 @@ export default {
 }
 </script>
 <template>
-    <header class="d-flex justify-content-between align-items-center container-xl">
+    <header class="d-flex justify-content-between align-items-center container-lg">
         <div class="logo_container">
             <img class="main_logo" src="../assets/img/images/dark-logo.png" alt="Main_logo">
         </div>
