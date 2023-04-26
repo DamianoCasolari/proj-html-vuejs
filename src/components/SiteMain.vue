@@ -1,19 +1,22 @@
 <script>
+import SiteJumbotron from './SiteJumbotron.vue';
+
 export default {
     name: "SiteMain",
     data() {
 
 
         return {}
+    },
+    components: {
+        SiteJumbotron
     }
 }
 </script>
 
 
 <template>
-    <div>
-
-    </div>
+    <SiteJumbotron />
 </template>
 
 
