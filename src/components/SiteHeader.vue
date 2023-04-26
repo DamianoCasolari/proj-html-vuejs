@@ -1,5 +1,6 @@
 <script>
 import MainMenu from './MainMenu.vue';
+import { faCircle } from '@fortawesome/free-regular-svg-icons';
 export default {
 
 
@@ -7,7 +8,10 @@ export default {
     data() {
 
 
-        return {}
+        return {
+            faCircle
+
+        }
     },
     components: {
         MainMenu
@@ -26,6 +30,8 @@ export default {
             <a href="#"><font-awesome-icon :icon="['fab', 'facebook']" class="mx-2" /></a>
             <a href="#"><font-awesome-icon :icon="['fab', 'instagram']" class="mx-2" /></a>
             <a href="#"><font-awesome-icon :icon="['fab', 'linkedin']" class="mx-2" /></a>
+            <a href="#"><font-awesome-icon :icon="faCircle" class="mx-2" /></a>
+            <!-- <font-awesome-icon :icon="icons.faCircle" /> -->
         </div>
     </header>
 </template>

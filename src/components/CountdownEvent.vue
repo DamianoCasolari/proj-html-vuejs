@@ -1,18 +1,44 @@
 <script>
+import { faClock } from '@fortawesome/free-regular-svg-icons';
+
 export default {
     name: "CountdownEvent",
     data() {
 
 
-        return {}
+        return {
+            faClock
+        }
     }
 }
 </script>
 
 
 <template>
-    <div class="countdown">
-
+    <div class="countdown d-flex justify-content-center align-items-center">
+        <div class="statement">
+            Start TOMORROW! Our biggest event of the year...
+        </div>
+        <div class="counter_container d-flex">
+            <span>
+                <font-awesome-icon :icon="faClock" class="mx-2 clock" />
+            </span>
+            <div class="counter">
+                <span>
+                    00 : 00 : 00 : 00
+                </span>
+                <!-- <span>
+                00 :
+            </span>
+            <span>
+                00 :
+            </span>
+            <span>
+                00
+            </span> -->
+            </div>
+        </div>
+        <button class="juice_button">Get ticket</button>
     </div>
 </template>
 
@@ -24,5 +50,31 @@ export default {
 .countdown {
     height: 50px;
     background-color: $clr_countdown;
+    font-size: calc(10px + 0.1vw);
+
+
+    .clock {
+        font-size: 18px;
+        color: $clr_total_dark;
+        vertical-align: middle;
+    }
+
+    .counter {
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    .juice_button {
+        background-color: $clr_juice_button;
+        color: $clr_primary_light;
+        margin: 20px;
+        padding: 3px 25px;
+        font-weight: 600;
+        font-size: calc(12px + 0.1vw);
+        border-radius: 4px;
+        border: none;
+
+
+    }
 }
 </style>
