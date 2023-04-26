@@ -23,5 +23,6 @@ export default {
 
 .countdown {
     height: 50px;
+    background-color: $clr_countdown;
 }
 </style>

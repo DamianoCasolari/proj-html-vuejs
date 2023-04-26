@@ -1,6 +1,10 @@
 import { createApp } from 'vue'
 import './assets/scss/app.scss'
 import App from './App.vue'
+import * as bootstrap from 'bootstrap'
+
+
+
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faUser, faEnvelope, faStar, faSearch, faBell, faSun, faCloudMoon, faMoon } from '@fortawesome/free-solid-svg-icons';

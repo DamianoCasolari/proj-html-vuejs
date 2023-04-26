@@ -4,12 +4,13 @@
 
 header {
     height: 80px;
+    background-color: $clr_primary_light;
 
     .main_logo {
         width: 150px;
     }
 
-    .social_links {
+    .social_links a {
         color: $clr_dusty_gray;
     }
 }

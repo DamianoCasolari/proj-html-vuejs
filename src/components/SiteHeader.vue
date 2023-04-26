@@ -22,10 +22,10 @@ export default {
         <MainMenu />
 
         <div class="social_links">
-            <font-awesome-icon :icon="['fab', 'twitter']" class="mx-2" />
-            <font-awesome-icon :icon="['fab', 'facebook']" class="mx-2" />
-            <font-awesome-icon :icon="['fab', 'instagram']" class="mx-2" />
-            <font-awesome-icon :icon="['fab', 'linkedin']" class="mx-2" />
+            <a href="#"><font-awesome-icon :icon="['fab', 'twitter']" class="mx-2" /></a>
+            <a href="#"><font-awesome-icon :icon="['fab', 'facebook']" class="mx-2" /></a>
+            <a href="#"><font-awesome-icon :icon="['fab', 'instagram']" class="mx-2" /></a>
+            <a href="#"><font-awesome-icon :icon="['fab', 'linkedin']" class="mx-2" /></a>
         </div>
     </header>
 </template>
