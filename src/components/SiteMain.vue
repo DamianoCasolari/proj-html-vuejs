@@ -1,6 +1,8 @@
 <script>
 import SiteJumbotron from './SiteJumbotron.vue';
 import ArtistCoaching from './ArtistCoaching.vue';
+import MartinGarrix from './MartinGarrix.vue';
+import VideoSection from './VideoSection.vue';
 
 export default {
     name: "SiteMain",
@@ -11,15 +13,19 @@ export default {
     },
     components: {
         SiteJumbotron,
-        ArtistCoaching
+        ArtistCoaching,
+        MartinGarrix,
+        VideoSection
     }
 }
 </script>
 
 
 <template>
-    <SiteJumbotron />
-    <ArtistCoaching />
+    <SiteJumbotron /> <!-- BANNER-->
+    <ArtistCoaching /> <!-- SECTION1-->
+    <MartinGarrix /> <!-- SECTION2-->
+    <VideoSection /> <!-- SECTION3-->
 </template>
 
 
