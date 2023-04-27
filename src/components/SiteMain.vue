@@ -3,6 +3,7 @@ import SiteJumbotron from './SiteJumbotron.vue';
 import ArtistCoaching from './ArtistCoaching.vue';
 import MartinGarrix from './MartinGarrix.vue';
 import VideoSection from './VideoSection.vue';
+import TestimonialsSlider from './TestimonialsSlider.vue';
 
 export default {
     name: "SiteMain",
@@ -15,7 +16,8 @@ export default {
         SiteJumbotron,
         ArtistCoaching,
         MartinGarrix,
-        VideoSection
+        VideoSection,
+        TestimonialsSlider
     }
 }
 </script>
@@ -26,6 +28,7 @@ export default {
     <ArtistCoaching /> <!-- SECTION1-->
     <MartinGarrix /> <!-- SECTION2-->
     <VideoSection /> <!-- SECTION3-->
+    <TestimonialsSlider /> <!-- SECTION4-->
 </template>
 
 

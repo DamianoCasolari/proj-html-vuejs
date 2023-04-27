@@ -18,7 +18,7 @@ export default {
         <div class="container-lg d-flex justify-content-center align-items-center flex-column h-100 p-3">
 
             <div class="f_fasthand heavenly fs-1 z_index5">Artist Coaching</div>
-            <h3 class="main_title text-center z_index5"> I understand what it takes to create.<br> I can help you with</h3>
+            <h4 class="main_title text-center z_index5"> I understand what it takes to create.<br> I can help you with</h4>
             <div class="about_coures row row-cols-1 row row-cols-sm-2 row row-cols-md-4 w-100 text-center py-5">
                 <div class="Online_coures col p-4">
                     <div class="img_container">
@@ -32,7 +32,8 @@ export default {
                     <div class="img_container">
                         <img src="../assets/img/images/artist-box-image-02.png" alt="rainbow">
                         <h5>One to One</h5>
-                        <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos magni
+                        <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos
+                            magni
                             ad obcaecati esse pariatur sit, placeat voluptates odit? At, nemo.</div>
                     </div>
                 </div>
@@ -48,7 +49,8 @@ export default {
                     <div class="img_container">
                         <img src="../assets/img/images/artist-box-image-04.png" alt="eye">
                         <h5>on time</h5>
-                        <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, dolore?
+                        <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis,
+                            dolore?
                             Repellendus qui amet nesciunt obcaecati debitis quaerat repudiandae ipsam odit?</div>
                     </div>
                 </div>
