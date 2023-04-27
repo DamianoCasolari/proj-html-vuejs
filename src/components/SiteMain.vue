@@ -4,6 +4,7 @@ import ArtistCoaching from './ArtistCoaching.vue';
 import MartinGarrix from './MartinGarrix.vue';
 import VideoSection from './VideoSection.vue';
 import TestimonialsSlider from './TestimonialsSlider.vue';
+import LatestCourses from './LatestCourses.vue';
 
 export default {
     name: "SiteMain",
@@ -17,7 +18,8 @@ export default {
         ArtistCoaching,
         MartinGarrix,
         VideoSection,
-        TestimonialsSlider
+        TestimonialsSlider,
+        LatestCourses
     }
 }
 </script>
@@ -29,6 +31,7 @@ export default {
     <MartinGarrix /> <!-- SECTION2-->
     <VideoSection /> <!-- SECTION3-->
     <TestimonialsSlider /> <!-- SECTION4-->
+    <LatestCourses /> <!-- SECTION5-->
 </template>
 
 

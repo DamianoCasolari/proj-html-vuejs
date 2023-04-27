@@ -13,6 +13,10 @@ export default {
         }
     },
     methods: {
+        getImagePath: function (name) {
+            return new URL(`/src/assets/img/images/${name}`, import.meta.url).href
+        },
+
         start_position_slider() {
             if (testimonialsArray) {
                 const activeE = document.querySelector(".testimonial_card.active")
@@ -63,10 +67,12 @@ export default {
         <div class="testimonials_slider d-flex flex-column align-items-center p-5 position-relative">
 
             <!-- add button carousel  -->
-            <button class="btn_carousel btn_left border-0 bg-transparent start-0 position-absolute" @click="previousGame">
+            <button class="btn_carousel btn_left border-0 bg-transparent start-0 position-absolute z_index5"
+                @click="previousGame">
                 <font-awesome-icon icon="chevron-left" />
             </button>
-            <button class="btn_carousel btn_right border-0 bg-transparent end-0 position-absolute" @click="turnRight">
+            <button class="btn_carousel btn_right border-0 bg-transparent end-0 position-absolute z_index5"
+                @click="turnRight">
                 <font-awesome-icon icon="chevron-right" />
                 <!-- <font-awesome-icon icon="circle" /> -->
             </button>
@@ -90,7 +96,7 @@ export default {
 
                         <div class="testimonial_info d-flex">
                             <div class="img_container">
-                                <img :src="testimonial.img" alt="testimonial pictures">
+                                <img :src="getImagePath(testimonial.img)" alt="testimonial pictures">
                             </div>
                             <div class="info ms-4">
                                 <div class="name">{{ testimonial.name }}</div>
