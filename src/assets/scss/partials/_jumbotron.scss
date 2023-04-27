@@ -12,11 +12,6 @@
     .middle_side {
 
 
-        .title_banner {
-            font-weight: 900;
-            word-wrap: break-word;
-        }
-
         .started_today {
             background-color: $clr_juice_button;
             color: $clr_primary_light;
@@ -100,7 +95,7 @@
 
     .right_side {
 
-        height: 100%;
+
         position: relative;
         display: flex;
         justify-content: center;

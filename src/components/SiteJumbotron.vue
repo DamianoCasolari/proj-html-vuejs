@@ -32,7 +32,7 @@ export default {
             <div
                 class="middle_side col-12 col-md-8 col-xl-4 d-flex justify-content-center flex-column align-items-center px-5">
                 <div class="f_fasthand heavenly fs-1 z_index5">Hello, Im Martin </div>
-                <h3 class="title_banner text-center z_index5">Artist Coaching And Mentoring Might Be for You. </h3>
+                <h3 class="main_title text-center z_index5">Artist Coaching And Mentoring Might Be for You. </h3>
                 <button class="started_today z_index5">Get started today</button>
 
             </div>

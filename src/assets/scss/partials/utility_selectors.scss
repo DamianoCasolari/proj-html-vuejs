@@ -1,6 +1,9 @@
 @use "./variables" as *;
 
 
+
+// In main zone 
+
 .f_fasthand {
     // font-family: 'Fasthand', cursive;
     font-family: 'Comforter', cursive;
@@ -13,6 +16,12 @@
 
 .z_index5 {
     z-index: 5;
+}
+
+
+.main_title {
+    font-weight: 900;
+    word-wrap: break-word;
 }
 
 // font-family: 'Fasthand', cursive;
