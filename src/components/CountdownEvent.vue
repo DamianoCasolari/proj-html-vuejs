@@ -15,8 +15,8 @@ export default {
 
 
 <template>
-    <div class="countdown d-flex justify-content-center align-items-center">
-        <div class="statement">
+    <div class="countdown d-flex justify-content-center align-items-center flex-wrap">
+        <div class="statement py-2">
             Start TOMORROW! Our biggest event of the year...
         </div>
         <div class="counter_container d-flex">
@@ -48,7 +48,7 @@ export default {
 @use "../assets/scss/partials/utility_selectors.scss" as *;
 
 .countdown {
-    height: 50px;
+    // height: 50px;
     background-color: $clr_countdown;
     font-size: calc(10px + 0.1vw);
 

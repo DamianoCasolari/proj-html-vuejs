@@ -86,7 +86,7 @@ export default {
         }
 
         .single_event:hover {
-            border: 1px solid;
+            border: 1px solid $clr_street;
         }
 
         .single_event:hover img {

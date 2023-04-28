@@ -8,7 +8,6 @@ export default {
     data() {
         return {
             navbarHeaderInfo
-            // menu: ["Home", "Pages", "Courses", "Features", "Blog", "Shop"]
         }
     },
     components: {

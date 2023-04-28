@@ -1,2 +1,44 @@
 @use "./variables" as *;
 @use "./utility_selectors.scss" as *;
+
+footer {
+
+    .fs_12 {
+        font-size: calc(12px + 0.1vw);
+    }
+
+    .adresses {
+
+        & * {
+            margin-bottom: 20px;
+        }
+
+        .social_links a {
+            color: $clr_dusty_gray;
+        }
+    }
+
+    .other_information a {
+        color: $clr_street;
+
+        &:hover {
+            text-decoration: underline !important;
+        }
+    }
+
+
+    .info_right {
+        span {
+            color: $clr_dusty_gray;
+        }
+
+        img {
+            width: 100px;
+        }
+    }
+
+    .bottom {
+        color: $clr_street;
+    }
+
+}

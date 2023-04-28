@@ -7,6 +7,7 @@ import TestimonialsSlider from './TestimonialsSlider.vue';
 import LatestCourses from './LatestCourses.vue';
 import LatestFromTheBlog from './LatestFromTheBlog.vue';
 import LetsWorkTogheter from './LetsWorkTogheter.vue';
+import NewsletterSection from './NewsletterSection.vue';
 
 export default {
     name: "SiteMain",
@@ -23,7 +24,8 @@ export default {
         TestimonialsSlider,
         LatestCourses,
         LatestFromTheBlog,
-        LetsWorkTogheter
+        LetsWorkTogheter,
+        NewsletterSection
     }
 }
 </script>
@@ -38,6 +40,7 @@ export default {
     <LatestCourses /> <!-- SECTION5-->
     <LatestFromTheBlog /> <!-- SECTION6-->
     <LetsWorkTogheter /> <!-- SECTION7-->
+    <NewsletterSection /> <!-- NEWSLETTERFORM-->
 </template>
 
 

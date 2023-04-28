@@ -64,7 +64,7 @@ export default {
 
 <template>
     <section>
-        <div class="testimonials_slider d-flex flex-column align-items-center p-5 position-relative">
+        <div class="testimonials_slider d-flex flex-column align-items-center p-5 position-relative container-lg">
 
             <!-- add button carousel  -->
             <button class="btn_carousel btn_left border-0 bg-transparent start-0 position-absolute z_index5"
@@ -117,59 +117,75 @@ export default {
 @use "../assets/scss/partials/variables" as *;
 @use "../assets/scss/partials/utility_selectors.scss" as *;
 
-.testimonials_slider {
 
+section {
     background-color: $clr_lovesection_background;
-    min-height: 500px;
-    max-width: 100%;
-
-    .btn_carousel {
-        top: 50%;
-        font-size: 30px;
-        margin: 0 50px;
-        color: $clr_dusty_gray;
-    }
 
 
-    .testimonial_card {
+    .testimonials_slider {
 
-        background-color: $clr_primary_light;
-        position: absolute;
-        display: none;
-
-        .testimonial_info {
-            transition-duration: 1.5s;
+        min-height: 550px;
 
 
-            .name {
-                font-weight: 700;
+        .btn_carousel {
+            top: 50%;
+            font-size: 30px;
+            margin: 0 50px;
+            color: $clr_dusty_gray;
+        }
+
+
+        .testimonial_card {
+
+            background-color: $clr_primary_light;
+            position: absolute;
+            display: none;
+
+            .testimonial_info {
+                transition-duration: 1.5s;
+
+
+                .name {
+                    font-weight: 700;
+                }
+
+                img {
+                    width: 50px;
+                    border-radius: 50%;
+                }
             }
 
-            img {
-                width: 50px;
-                border-radius: 50%;
+            &.active {
+                display: flex !important;
             }
-        }
 
-        &.active {
-            display: flex !important;
-        }
+            &.left_card {
+                left: -115%;
+                width: 90%;
+                opacity: 0.5;
+                display: flex !important;
+                transition: 1s;
+            }
 
-        &.left_card {
-            left: -115%;
-            width: 90%;
-            opacity: 0.5;
-            display: flex !important;
-        }
+            &.right_card {
+                left: 115%;
+                width: 90%;
+                opacity: 0.5;
+                display: flex !important;
+                transition: 1s;
 
-        &.right_card {
-            left: 115%;
-            width: 90%;
-            opacity: 0.5;
-            display: flex !important;
-        }
+            }
 
+        }
     }
+}
 
+@media screen and (max-width: 768px) {
+
+    .left_card,
+    .right_card {
+        opacity: 0 !important;
+        // display: none !important;
+    }
 }
 </style>
