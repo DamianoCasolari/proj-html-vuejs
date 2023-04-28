@@ -47,10 +47,11 @@ export default {
         position: relative;
         display: flex;
         justify-content: center;
-        min-height: 500px;
+        // min-height: 500px;
 
         iframe {
             filter: drop-shadow(1px 2px 4px black);
+            margin: 50px 0;
         }
 
         .shapes_container {
@@ -92,6 +93,14 @@ export default {
                 position: absolute;
             }
         }
+    }
+}
+
+
+@media screen and (max-width: 576px) {
+    iframe {
+        width: 100% !important;
+        height: 100% !important;
     }
 }
 </style>

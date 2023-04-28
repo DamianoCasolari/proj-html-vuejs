@@ -20,9 +20,7 @@ export default {
                 {{ option.title }}
             </button>
             <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">{{ option.drop1 }}</a></li>
-                <li><a class="dropdown-item" href="#">{{ option.drop2 }}</a></li>
-                <li><a class="dropdown-item" href="#">{{ option.drop3 }}</a></li>
+                <li><a class="dropdown-item" href="#" v-for="drop in option.drops">{{ drop }}</a></li>
             </ul>
         </div>
     </nav>
