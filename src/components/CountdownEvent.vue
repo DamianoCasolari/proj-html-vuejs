@@ -4,8 +4,6 @@ import { faClock } from '@fortawesome/free-regular-svg-icons';
 export default {
     name: "CountdownEvent",
     data() {
-
-
         return {
             faClock
         }
@@ -15,7 +13,7 @@ export default {
 
 
 <template>
-    <div class="countdown d-flex justify-content-center align-items-center flex-wrap">
+    <div id="top_page" class="countdown d-flex justify-content-center align-items-center flex-wrap">
         <div class="statement py-2">
             Start TOMORROW! Our biggest event of the year...
         </div>

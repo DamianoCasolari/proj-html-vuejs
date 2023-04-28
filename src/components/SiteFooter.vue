@@ -56,8 +56,11 @@ export default {
                 </div>
             </div>
         </div>
-        <div class="bottom text-center my-3"><i class="fa fa-copyright me-2" aria-hidden="true"></i>
+        <div class="bottom text-center my-3 position-relative"><i class="fa fa-copyright me-2" aria-hidden="true"></i>
             <span>Damiano Casolari</span>
+            <a href="#top_page">
+                <div class="arrow-container"><i class="fa-solid fa-arrow-up text-white"></i></div>
+            </a>
         </div>
     </footer>
 </template>

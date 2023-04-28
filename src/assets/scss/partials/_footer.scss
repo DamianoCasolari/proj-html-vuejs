@@ -39,6 +39,20 @@ footer {
 
     .bottom {
         color: $clr_street;
-    }
 
+
+        .arrow-container {
+            width: 60px;
+            aspect-ratio: 1/1;
+            background-color: orange;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+
+        }
+    }
 }
