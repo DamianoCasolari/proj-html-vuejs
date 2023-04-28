@@ -6,6 +6,7 @@ import VideoSection from './VideoSection.vue';
 import TestimonialsSlider from './TestimonialsSlider.vue';
 import LatestCourses from './LatestCourses.vue';
 import LatestFromTheBlog from './LatestFromTheBlog.vue';
+import LetsWorkTogheter from './LetsWorkTogheter.vue';
 
 export default {
     name: "SiteMain",
@@ -21,7 +22,8 @@ export default {
         VideoSection,
         TestimonialsSlider,
         LatestCourses,
-        LatestFromTheBlog
+        LatestFromTheBlog,
+        LetsWorkTogheter
     }
 }
 </script>
@@ -35,6 +37,7 @@ export default {
     <TestimonialsSlider /> <!-- SECTION4-->
     <LatestCourses /> <!-- SECTION5-->
     <LatestFromTheBlog /> <!-- SECTION6-->
+    <LetsWorkTogheter /> <!-- SECTION7-->
 </template>
 
 

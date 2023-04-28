@@ -1,4 +1,5 @@
 <script>
+import { navbarHeaderInfo } from "../data/navbarHeaderInfo.js"
 import MainMenu from './MainMenu.vue';
 export default {
 
@@ -6,11 +7,13 @@ export default {
     name: "SiteHeader",
     data() {
         return {
-
+            navbarHeaderInfo
+            // menu: ["Home", "Pages", "Courses", "Features", "Blog", "Shop"]
         }
     },
     components: {
-        MainMenu
+        MainMenu,
+
     }
 }
 </script>
@@ -19,7 +22,7 @@ export default {
         <div class="logo_container">
             <img class="main_logo" src="../assets/img/images/dark-logo.png" alt="Main_logo">
         </div>
-        <MainMenu />
+        <MainMenu :menu="navbarHeaderInfo" />
 
         <div class="social_links">
             <a href="#"><font-awesome-icon :icon="['fab', 'twitter']" class="mx-2" /></a>

@@ -38,8 +38,8 @@ export default {
                         <h6 class="title ">Connection Between Self-Portraits and identity</h6>
                         <div class="description ">
                             <font-awesome-icon :icon="faCalendar" class="me-2" /><span class="me-2"> may, 15 20
-                            </span>
-                            <font-awesome-icon :icon="faEye" class="mx-2" /><span>600 views</span>
+                            </span> <br>
+                            <font-awesome-icon :icon="faEye" class="me-2" /><span>600 views</span>
                         </div>
                     </div>
 
@@ -73,12 +73,15 @@ export default {
                         <h6 class="title ">Connection Between Self-Portraits and identity</h6>
                         <div class="description ">
                             <font-awesome-icon :icon="faCalendar" class="me-2" /><span class="me-2"> may, 15 20
-                            </span>
-                            <font-awesome-icon :icon="faEye" class="mx-2" /><span>600 views</span>
+                            </span><br>
+                            <font-awesome-icon :icon="faEye" class="me-2" /><span>600 views</span>
                         </div>
                     </div>
                 </div>
 
+            </div>
+            <div class="bottom z_index6">
+                <span class="text-secondary">Get into details now?</span> <a href="#">View all post</a>
             </div>
             <!-- Shapes Background -->
             <div class="shapes_container">
@@ -95,118 +98,4 @@ export default {
 </template>
 
 
-<style lang="scss" scoped>
-@use "../assets/scss/partials/variables" as *;
-@use "../assets/scss/partials/utility_selectors.scss" as *;
-
-
-.blog_section {
-    background-color: $clr_blog_section;
-    background-image: url("../assets/img/images/maxcoach-shape-14-1536x343.png");
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    .box {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        min-height: 500px;
-
-        .links_to_articles {
-            height: 100%;
-
-            .on_the_left {
-                margin-top: 10%;
-
-            }
-
-            .main_article {
-
-                z-index: 5;
-                filter: drop-shadow(1px 2px 4px black);
-                height: 100%;
-                margin-bottom: 20px;
-
-
-                .img_container {
-                    width: 100%;
-                    height: 100%;
-
-
-                    img {
-                        filter: brightness(80%);
-                        object-fit: cover;
-                        width: 100%;
-                        max-height: 100%;
-                    }
-
-                }
-
-
-                .details {
-                    bottom: 20px;
-                    left: 20px;
-                    color: $clr_primary_light;
-
-                    .title {
-                        word-wrap: break-word;
-                    }
-
-                    &.middle_card * {
-                        text-shadow: 1px 1px 1px $clr_total_dark;
-                    }
-
-                }
-
-                .details_container {
-                    padding: 10px;
-                    background-color: $clr_primary_light;
-                }
-            }
-        }
-
-        .shapes_container {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            bottom: 0;
-            max-width: 600px;
-
-            img {
-                width: 100%;
-                position: absolute;
-            }
-
-            .shape_abstract {
-                top: 89%;
-                right: -10%;
-                width: 190px;
-                transform: rotate(90deg);
-            }
-
-            .shape_dotted {
-                top: 10%;
-                right: 84%;
-                width: 100px;
-            }
-
-            .shape_big_dotted {
-                bottom: 51%;
-                right: -25%;
-                width: 120px;
-            }
-
-            .shape_circle {
-                z-index: 6;
-                color: $clr_juice_button;
-                bottom: 77%;
-                right: 145%;
-                font-size: 60px;
-                font-weight: bold;
-                position: absolute;
-            }
-        }
-    }
-}
-</style>
+<style lang="scss" scoped></style>

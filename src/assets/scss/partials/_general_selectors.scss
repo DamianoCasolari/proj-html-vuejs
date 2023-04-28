@@ -10,7 +10,9 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
 }
+
 
 
 li {
@@ -27,7 +29,7 @@ a {
 
 ::-webkit-scrollbar {
     width: 6px;
-    background-color: $clr_primary_light;
+    background-color: $clr_dusty_gray;
 }
 
 ::-webkit-scrollbar-thumb {
