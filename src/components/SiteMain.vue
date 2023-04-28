@@ -5,6 +5,7 @@ import MartinGarrix from './MartinGarrix.vue';
 import VideoSection from './VideoSection.vue';
 import TestimonialsSlider from './TestimonialsSlider.vue';
 import LatestCourses from './LatestCourses.vue';
+import LatestFromTheBlog from './LatestFromTheBlog.vue';
 
 export default {
     name: "SiteMain",
@@ -19,7 +20,8 @@ export default {
         MartinGarrix,
         VideoSection,
         TestimonialsSlider,
-        LatestCourses
+        LatestCourses,
+        LatestFromTheBlog
     }
 }
 </script>
@@ -32,6 +34,7 @@ export default {
     <VideoSection /> <!-- SECTION3-->
     <TestimonialsSlider /> <!-- SECTION4-->
     <LatestCourses /> <!-- SECTION5-->
+    <LatestFromTheBlog /> <!-- SECTION6-->
 </template>
 
 

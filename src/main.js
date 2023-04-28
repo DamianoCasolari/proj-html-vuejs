@@ -7,12 +7,13 @@ import * as bootstrap from 'bootstrap'
 
 
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faUser, faFile, faEnvelope, faClock, faCircle, faStar, faSearch, faBell, faSun, faCloudMoon, faMoon, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+// import { faCalendarAlt, faEye } from '@fortawesome/free-regular-svg-icons'
+import { faCalendar, faEye, faUser, faFile, faEnvelope, faClock, faCircle, faStar, faSearch, faBell, faSun, faCloudMoon, faMoon, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import '@fortawesome/fontawesome-free/css/all.css'
 
-library.add(faUser, faEnvelope, faClock, faCircle, faStar, faFacebook, faTwitter, faInstagram, faLinkedin, faSearch, faBell, faSun, faCloudMoon, faMoon, faChevronLeft, faChevronRight, faFile);
+library.add(faCalendar, faEye, faUser, faEnvelope, faClock, faCircle, faStar, faFacebook, faTwitter, faInstagram, faLinkedin, faSearch, faBell, faSun, faCloudMoon, faMoon, faChevronLeft, faChevronRight, faFile);
 
 
 createApp(App).component('font-awesome-icon', FontAwesomeIcon).mount('#app')

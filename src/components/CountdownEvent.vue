@@ -73,7 +73,12 @@ export default {
         font-size: calc(12px + 0.1vw);
         border-radius: 4px;
         border: none;
+        transition-duration: 0.5s;
 
+        &:hover {
+            background-color: $clr_italic_heavenly;
+
+        }
 
     }
 }

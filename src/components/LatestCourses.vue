@@ -38,7 +38,7 @@ export default {
                             <h6 class="my-2">{{ course.title }}</h6>
                             <div class="description ">
                                 <font-awesome-icon icon="file" class="me-2" /><span class="me-2">{{ course.lessons +
-                                    "lessons" }}</span> <br>
+                                    " lessons" }}</span> <br>
                                 <font-awesome-icon icon="user" class="mx-2" /><span>{{ course.students + " students"
                                 }}</span>
                             </div>
@@ -46,6 +46,7 @@ export default {
                     </div>
                 </div>
             </div>
+            <button class="gray_button">View all course &rarr; </button>
 
         </div>
 
@@ -61,8 +62,8 @@ export default {
 .latest_courses {
     // height: 600px;
     background-color: $clr_primary_light;
-    background-image: url("../assets/img/images/maxcoach-shape-14-1536x343.png");
-    background-position: cover;
+    background-image: url("../assets/img/images/maxcoach-shape-14-1024x229.png");
+    background-size: contain;
     background-repeat: no-repeat;
 
 
@@ -71,8 +72,8 @@ export default {
 
     &>div {
 
-        background-image: url("../assets/img/images/artist-shape-01-300x288\ -\ Copia.png"), url("../assets/img/images/maxcoach-shape-13.png");
-        background-position: top left, right;
+        background-image: url("../assets/img/images/artist-shape-01-300x288\ -\ Copia.png");
+        background-position: right;
         background-repeat: no-repeat;
 
 
@@ -86,7 +87,23 @@ export default {
 
         img {
             max-width: 100%;
+            transition-duration: 0.5s;
         }
+
+        .img_container {
+            cursor: pointer;
+        }
+
+        .img_container:hover img {
+            transform: scale(0.8);
+        }
+
+        .img_container:hover .details {
+            border-top: 1px solid;
+            border-color: $clr_juice_button;
+            ;
+        }
+
 
 
         .price {

@@ -71,7 +71,8 @@ export default {
     // height: 600px;
     background-color: $clr_primary_light;
     background-image: url("../assets/img/images/maxcoach-shape-14-1536x343.png");
-    background-position: cover;
+    background-size: contain;
+    background-position: center;
     background-repeat: no-repeat;
 
 

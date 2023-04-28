@@ -35,11 +35,20 @@
     font-size: calc(12px + 0.1vw);
     border-radius: 4px;
     border: none;
+    transition-duration: 0.5s;
 
-
+    &:hover {
+        background-color: $clr_left_spot;
+        // color: $clr_brackets;
+        // border: 2px solid $clr_brackets;
+    }
 }
 
+// Transition on image
 
+.shrink:hover {
+    transform: scale(0.85%);
+}
 
 
 
