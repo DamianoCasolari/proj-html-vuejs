@@ -1,5 +1,7 @@
 <script>
 import { faCircle } from '@fortawesome/free-regular-svg-icons';
+import { appearWithScroll } from '../assets/js/utility_functions.js';
+
 
 export default {
 
@@ -8,16 +10,27 @@ export default {
 
 
         return {
-            faCircle
+            faCircle,
+            appearWithScroll
         }
+    },
+    methods: {
+        scrollFunction() {
+            const section = document.querySelector(".video_section")
+            appearWithScroll(section)
+        }
+    },
+    mounted() {
+        this.scrollFunction()
+
     }
 }
 </script>
 
 
 <template>
-    <section class="video_section p-3 d-flex justify-content-center align-items-center">
-        <div class="box">
+    <section class="video_section p-3 d-flex justify-content-center align-items-center td_1s">
+        <div class="box ">
             <div class="shapes_container">
                 <img class="shape_abstract"
                     src="../assets/img/images/vecteezy_abstract-colorful-blob-shapes-element-design_14273448_100.png"

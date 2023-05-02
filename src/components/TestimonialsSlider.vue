@@ -1,14 +1,18 @@
 <script>
 import { testimonialsArray } from "../data/testimonialsInfo"
+import { appearWithScroll } from '../assets/js/utility_functions.js';
+
 
 export default {
     name: "TesimonialsSlider",
     data() {
-
-
         return {
             testimonialsArray,
-            currentIndex: 0
+            currentIndex: 0,
+            buttonRight: false,
+            buttonLeft: false,
+            autoplayElement: "",
+            appearWithScroll
 
         }
     },
@@ -17,64 +21,82 @@ export default {
             return new URL(`/src/assets/img/images/${name}`, import.meta.url).href
         },
 
-        start_position_slider() {
-            if (testimonialsArray) {
-                const activeE = document.querySelector(".testimonial_card.active")
-                const testimonials = document.querySelectorAll(".testimonial_card");
-                const lastE = testimonials[testimonials.length - 1];
-                activeE.nextElementSibling.classList.add("right_card")
-                lastE.classList.add("left_card");
+        getCardClasses(index) {
+            const activeIndex = this.currentIndex;
+            const firstIndex = (activeIndex === 0) ? (this.testimonialsArray.length - 2) : ((activeIndex === 1) ? (this.testimonialsArray.length - 1) : (activeIndex - 2));
+            const prevIndex = activeIndex === 0 ? this.testimonialsArray.length - 1 : activeIndex - 1;
+            const nextIndex = (activeIndex + 1) % this.testimonialsArray.length;
+            const lastIndex = (activeIndex + 2) % this.testimonialsArray.length;
 
-            }
+            const classes = {
+                'active': index === activeIndex,
+                'left_card': index === prevIndex,
+                'right_card': index === nextIndex,
+                //slide if you click right button
+                'slideToTheCentral': index === activeIndex && this.buttonRight == true,
+                'slideLeft': index === prevIndex && this.buttonRight == true,
+                'slideRight': index === nextIndex && this.buttonRight == true,
+                'slideOut': index === firstIndex && this.buttonRight == true,
+                //slide if you click left button
+                'slideToTheCentral2': index === activeIndex && this.buttonLeft == true,
+                'slideLeft2': index === prevIndex && this.buttonLeft == true,
+                'slideRight2': index === nextIndex && this.buttonLeft == true,
+                'slideOut2': index === lastIndex && this.buttonLeft == true,
+            };
+
+            return classes;
+
+        }, turnRight() {
+            const numTestimonials = this.testimonialsArray.length;
+            const nextIndex = (this.currentIndex + 1) % numTestimonials;
+            this.currentIndex = nextIndex;
+            this.buttonLeft = false;
+            this.buttonRight = true;
         },
+        turnLeft() {
+            const nextIndex = this.currentIndex == 0 ? this.testimonialsArray.length - 1 : this.currentIndex - 1;
+            this.currentIndex = nextIndex;
+            this.buttonLeft = true;
+            this.buttonRight = false;
 
-        turnRight() {
-            const testimonials = document.querySelectorAll(".testimonial_card");
-            const activeE = document.querySelector(".testimonial_card.active");
-            if (this.currentIndex != 0) {
-                const prevE = activeE.previousElementSibling
-                prevE.classList.remove("left_card")
-
-            } else {
-                const prevE = testimonials[testimonials.length - 1];
-                console.log(prevE);
-                prevE.classList.remove("left_card")
-            }
-
-            const nextE = activeE.nextElementSibling || testimonials[0];
-            const secondNextE = nextE.nextElementSibling || testimonials[0];
-
-            activeE.classList.replace("active", "left_card")
-
-
-            activeE.classList.replace("right_card", "active")
-
-            secondNextE.classList.add("right_card");
-
-            this.currentIndex = (this.currentIndex + 1) % testimonialsArray.length;
+        },
+        autoPlay() {
+            this.autoplayElement = setInterval(() => this.turnRight(), 5000)
+            document.querySelector(".active").classList.remove("central_card_shadow")
+        },
+        stopPlay() {
+            clearInterval(this.autoplayElement)
+            document.querySelector(".active").classList.add("central_card_shadow")
+        },
+        scrollFunction() {
+            const section = document.querySelector(".testimonials_slider")
+            appearWithScroll(section)
         }
-    },
 
+    },
     mounted() {
-        this.start_position_slider()
+        this.autoPlay()
+        this.scrollFunction()
+
     }
 }
+
 </script>
 
 
 <template>
-    <section>
-        <div class="testimonials_slider d-flex flex-column align-items-center p-5 position-relative container-lg">
+    <section class="carouselle_section">
+        <div class="testimonials_slider d-flex flex-column align-items-center py-5 position-relative container-lg td_1s">
 
             <!-- add button carousel  -->
+
             <button class="btn_carousel btn_left border-0 bg-transparent start-0 position-absolute z_index5"
-                @click="previousGame">
+                @click="turnLeft" @mouseover="stopPlay()" @mouseleave="autoPlay()">
                 <font-awesome-icon icon="chevron-left" />
             </button>
             <button class="btn_carousel btn_right border-0 bg-transparent end-0 position-absolute z_index5"
-                @click="turnRight">
+                @click="turnRight" @mouseover="stopPlay()" @mouseleave="autoPlay()">
                 <font-awesome-icon icon="chevron-right" />
-                <!-- <font-awesome-icon icon="circle" /> -->
             </button>
 
             <div class="d-flex align-items-center flex-column px-5">
@@ -83,13 +105,13 @@ export default {
                 <div class="f_fasthand heavenly fs-1 z_index5">Testimonials </div>
                 <h5 class="main_title text-center z_index5">Why do people love me? </h5>
 
-                <!-- Carousell  FROM LG CONTAINER-->
+                <!-- Carousell-->
 
                 <div class="slider d-flex position-relative text-start container-lg w-100">
 
-
-                    <div class="testimonial_card p-3 mt-4 flex-column align-items-center"
-                        v-for="(testimonial, index) in testimonialsArray" :class="{ 'active': currentIndex == index }">
+                    <div class="testimonial_card p-3 mt-4 flex-column align-items-center" @mouseover="stopPlay()"
+                        @mouseleave="autoPlay()" v-for="(testimonial, index) in testimonialsArray"
+                        :class="getCardClasses(index)">
 
                         <h6 class="title fw-bold">{{ testimonial.title }}</h6>
                         <p class="opinion">{{ testimonial.opinion }}</p>
@@ -106,86 +128,11 @@ export default {
                     </div>
                 </div>
             </div>
-
         </div>
-
     </section>
 </template>
 
 
-<style lang="scss" scoped>
-@use "../assets/scss/partials/variables" as *;
-@use "../assets/scss/partials/utility_selectors.scss" as *;
+<style lang="scss" scoped></style>
 
 
-section {
-    background-color: $clr_lovesection_background;
-
-
-    .testimonials_slider {
-
-        min-height: 550px;
-
-
-        .btn_carousel {
-            top: 50%;
-            font-size: 30px;
-            margin: 0 50px;
-            color: $clr_dusty_gray;
-        }
-
-
-        .testimonial_card {
-
-            background-color: $clr_primary_light;
-            position: absolute;
-            display: none;
-
-            .testimonial_info {
-                transition-duration: 1.5s;
-
-
-                .name {
-                    font-weight: 700;
-                }
-
-                img {
-                    width: 50px;
-                    border-radius: 50%;
-                }
-            }
-
-            &.active {
-                display: flex !important;
-            }
-
-            &.left_card {
-                left: -115%;
-                width: 90%;
-                opacity: 0.5;
-                display: flex !important;
-                transition: 1s;
-            }
-
-            &.right_card {
-                left: 115%;
-                width: 90%;
-                opacity: 0.5;
-                display: flex !important;
-                transition: 1s;
-
-            }
-
-        }
-    }
-}
-
-@media screen and (max-width: 768px) {
-
-    .left_card,
-    .right_card {
-        opacity: 0 !important;
-        // display: none !important;
-    }
-}
-</style>

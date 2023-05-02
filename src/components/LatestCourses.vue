@@ -1,6 +1,8 @@
 <script>
 import { faUser, faFile } from '@fortawesome/free-regular-svg-icons';
 import { coursesArray } from "../data/coursesInfo"
+import { appearWithScroll } from '../assets/js/utility_functions.js';
+
 
 export default {
     name: "LatestCourses",
@@ -10,13 +12,22 @@ export default {
         return {
             faUser,
             faFile,
-            coursesArray
+            coursesArray,
+            appearWithScroll
         }
     },
     methods: {
         getImagePath: function (name) {
             return new URL(`../assets/img/images/${name}`, import.meta.url).href
         },
+        scrollFunction() {
+            const section = document.querySelector(".container_courses")
+            appearWithScroll(section)
+        }
+    },
+    mounted() {
+        this.scrollFunction()
+
     }
 }
 </script>
@@ -24,7 +35,8 @@ export default {
 
 <template>
     <section class="latest_courses p-3">
-        <div class="container-lg d-flex justify-content-center align-items-center flex-column h-100 p-3">
+        <div
+            class="container_courses container-lg d-flex justify-content-center align-items-center flex-column h-100 p-3 td_1s">
 
             <div class="f_fasthand heavenly fs-1 z_index5">Artist Coaching</div>
             <h5 class="main_title mt-0 text-center z_index5"> Latest Online Courses</h5>
@@ -66,10 +78,6 @@ export default {
     background-size: contain;
     background-repeat: no-repeat;
 
-
-
-
-
     &>div {
 
         background-image: url("../assets/img/images/artist-shape-01-300x288\ -\ Copia.png");
@@ -87,6 +95,7 @@ export default {
 
         img {
             max-width: 100%;
+            filter: drop-shadow(1px 2px 3px $clr_street);
             transition-duration: 0.5s;
         }
 
@@ -96,6 +105,7 @@ export default {
 
         .img_container:hover img {
             transform: scale(0.8);
+            border-radius: 20px;
         }
 
         .img_container:hover .details {
@@ -103,8 +113,6 @@ export default {
             border-color: $clr_juice_button;
             ;
         }
-
-
 
         .price {
             color: $clr_brackets;
@@ -119,12 +127,6 @@ export default {
             color: $clr_dusty_gray;
             font-size: 12px;
         }
-
-
-
-
     }
-
-
 }
 </style>

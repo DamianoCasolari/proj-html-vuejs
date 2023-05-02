@@ -1,4 +1,5 @@
 <script>
+import { appearWithScroll } from '../assets/js/utility_functions.js';
 
 export default {
     name: "MartinGarrix",
@@ -6,15 +7,25 @@ export default {
 
 
         return {
-
+            appearWithScroll
         }
+    },
+    methods: {
+        scrollFunction() {
+            const section = document.querySelector(".martin_garrix")
+            appearWithScroll(section)
+        }
+    },
+    mounted() {
+        this.scrollFunction()
+
     }
 }
 </script>
 
 
 <template>
-    <section class="martin_garrix p-3 d-flex justify-content-center align-items-center">
+    <section class="martin_garrix td_1s p-3 d-flex justify-content-center align-items-center">
         <div class="about_Martin container-lg d-flex justify-content-between align-items-start h-100 py-5 px-4 flex-wrap">
             <div class="left_side col-12 col-md-6 text-center position-relative">
                 <div class="quote img_container">
@@ -24,7 +35,7 @@ export default {
                     You
                     Mean it
                 </h3>
-                <div class="f_fasthand heavenly fs-1 z_index5 mt-4">Artist Coaching</div>
+                <div class="f_fasthand heavenly fs-1 z_index5 mt-4">Martin Garrix</div>
             </div>
             <div class="right_side col-12 col-md-6">
 

@@ -1,5 +1,7 @@
 <script>
 import { upcomingEventsArray } from "../data/upcomingEventsInfo"
+import { appearWithScroll } from '../assets/js/utility_functions.js';
+
 
 export default {
     name: "LatestCourses",
@@ -7,13 +9,22 @@ export default {
 
 
         return {
-            upcomingEventsArray
+            upcomingEventsArray,
+            appearWithScroll
         }
     },
     methods: {
         getImagePath: function (name) {
             return new URL(`../assets/img/images/${name}`, import.meta.url).href
         },
+        scrollFunction() {
+            const section = document.querySelector(".event_container")
+            appearWithScroll(section)
+        }
+    },
+    mounted() {
+        this.scrollFunction()
+
     }
 }
 </script>
@@ -21,7 +32,8 @@ export default {
 
 <template>
     <section class="upcoming_event p-3">
-        <div class="container-lg d-flex justify-content-center align-items-center flex-column h-100 p-3">
+        <div
+            class="event_container container-lg d-flex justify-content-center align-items-center flex-column h-100 p-3 td_1s">
 
             <div class="f_fasthand heavenly fs-1 z_index5">Upcoming Events</div>
             <h5 class="main_title mt-0 text-center z_index5"> Lets Work Together</h5>

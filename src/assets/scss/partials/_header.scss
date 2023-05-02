@@ -7,10 +7,10 @@ header {
     border-radius: 15px;
     background-color: $clr_primary_light;
     position: sticky;
-    top: 5px;
+    top: 0;
     left: 0;
     z-index: 1000;
-    filter: drop-shadow(3px 3px 4px rgb(77, 77, 77));
+    transition-duration: 1.5s;
 
     .main_logo {
         width: 150px;
@@ -18,5 +18,72 @@ header {
 
     .social_links a {
         color: $clr_dusty_gray;
+        transition-duration: 0.4s;
+
+
+        &:hover {
+            transform: scale(1.1);
+            color: $clr_bruise;
+        }
+
     }
+
+    button.deskopt_version {
+        font-size: 22px;
+        color: $clr_dusty_gray;
+        transition-duration: 0.4s;
+
+
+        &:hover {
+            color: $clr_bruise;
+            transform: scale(1.1);
+        }
+    }
+
+    .phone_menù {
+
+        button.phone_version {
+            font-size: 22px;
+            color: $clr_dusty_gray;
+            transition-duration: 0.4s;
+
+            &:hover {
+                color: $clr_bruise;
+                transform: scale(1.1);
+            }
+
+        }
+
+        .my_offcanvas {
+            height: 100vh;
+            background-color: $clr_blog_section;
+            background-image: url("../../assets/img/images/artist-shape-02-600x324\ -\ Copia.png"), url("../../assets/img/images/artist-hero-image-03-204x300.png");
+            background-position: top right, bottom left;
+            background-repeat: no-repeat, no-repeat;
+            border-radius: 20px 0 0 20px;
+
+
+            .block_options {
+                margin: 20px 0;
+
+
+                ul {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+
+                    li {
+                        padding-left: 0;
+                        transition-duration: 0.4s;
+                    }
+
+                    li:hover {
+                        background-color: $clr_blots_sky_blue;
+                    }
+                }
+            }
+        }
+
+    }
+
 }

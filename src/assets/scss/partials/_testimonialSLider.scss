@@ -1,0 +1,258 @@
+@use "./variables" as *;
+@use "./utility_selectors.scss" as *;
+
+section.carouselle_section {
+    background-color: $clr_lovesection_background;
+
+
+    .testimonials_slider {
+
+        min-height: 550px;
+
+
+        .btn_carousel {
+            top: 50%;
+            font-size: 30px;
+            margin: 0 20px;
+            color: $clr_dusty_gray;
+            transition-duration: 0.5s;
+
+            &:hover {
+                color: $clr_silver;
+                transform: scale(1.07);
+            }
+        }
+
+
+        .testimonial_card {
+
+            background-color: $clr_primary_light;
+            position: absolute;
+            opacity: 0;
+            cursor: default;
+
+            // CLASSES WITH ANIMATION 
+
+            &.slideOut {
+                animation: slideOut 1s both;
+                transition-duration: 1s;
+
+            }
+
+
+            &.slideLeft {
+
+                animation: slideLeft 1s both;
+            }
+
+
+            &.slideToTheCentral {
+                animation: slideToTheCentral 1s both;
+
+            }
+
+            &.slideRight {
+
+                animation: slideRight 1s both;
+            }
+
+
+            &.slideLeft2 {
+
+                animation: slideLeft2 1s both;
+            }
+
+            &.slideToTheCentral2 {
+                animation: slideToTheCentral2 1s both;
+
+            }
+
+            &.slideRight2 {
+
+                animation: slideRight2 1s both;
+            }
+
+            &.slideOut2 {
+
+                animation: slideOut2 1s both;
+            }
+
+            .testimonial_info {
+
+
+                .name {
+                    font-weight: 700;
+                }
+
+                img {
+                    width: 50px;
+                    border-radius: 50%;
+                }
+            }
+
+            &.active {
+                transform: scale(1.1);
+                opacity: 1;
+                transition-duration: 1.5s;
+                font-weight: 600;
+                color: $clr_total_dark;
+                z-index: 4;
+
+                // CUSTOMITATION
+                background-color: rgb(220, 242, 113);
+                background-blend-mode: luminosity;
+                background-image: url(../../assets/img/images/maxcoach-shape-12-150x150.png);
+                background-position: center;
+                border: 1px solid $clr_total_dark;
+                border-radius: 20px;
+                text-shadow: 1px 2px 3px $clr_street;
+                filter: drop-shadow(1px 2px 3px $clr_street);
+
+
+            }
+
+            &.left_card {
+                left: -115%;
+                width: 100%;
+                opacity: 0.5;
+                transition-duration: 1.5s;
+            }
+
+            &.right_card {
+                left: 115%;
+                width: 100%;
+                opacity: 0.5;
+                transition-duration: 1.5s;
+            }
+        }
+    }
+}
+
+
+// CUSTOM ANIMATIONS
+
+@keyframes slideToTheCentral {
+    from {
+        left: 115%;
+        width: 100%;
+        opacity: 0.5;
+    }
+
+    to {
+
+        left: 0;
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeft {
+    from {
+        left: 0;
+        width: 100%;
+        opacity: 1;
+        transition: 1s;
+    }
+
+    to {
+        left: -115%;
+        width: 100%;
+        opacity: 0.5;
+        transition: 1s;
+    }
+}
+
+@keyframes slideRight {
+    from {
+        left: 230%;
+        width: 100%;
+        opacity: 0;
+    }
+
+    to {
+        left: 115%;
+        width: 100%;
+        opacity: 0.5;
+    }
+}
+
+@keyframes slideOut {
+    from {
+        left: -115%;
+        width: 100%;
+        opacity: 0.5;
+        transition: 1s;
+    }
+
+    to {
+        left: -230%;
+        width: 100%;
+        opacity: 0;
+        transition: 1s;
+    }
+}
+
+@keyframes slideLeft2 {
+
+    from {
+        left: -230%;
+        width: 100%;
+        opacity: 0.5;
+        transition: 1s;
+    }
+
+    to {
+        left: -115%;
+        width: 100%;
+        opacity: 0.5;
+    }
+}
+
+@keyframes slideToTheCentral2 {
+
+    from {
+        left: -115%;
+        width: 100%;
+        opacity: 0.5;
+
+    }
+
+    to {
+        left: 0;
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+
+@keyframes slideRight2 {
+
+    from {
+        left: 0;
+        width: 100%;
+        opacity: 1;
+    }
+
+    to {
+        left: 115%;
+        width: 100%;
+        opacity: 0.5;
+    }
+
+}
+
+@keyframes slideOut2 {
+    from {
+        left: 115%;
+        width: 100%;
+        opacity: 0.5;
+        transition: 1s;
+    }
+
+    to {
+        left: 230%;
+        width: 100%;
+        opacity: 0;
+        transition: 1s;
+    }
+}

@@ -1,4 +1,5 @@
 <script>
+import { appearWithScroll } from '../assets/js/utility_functions.js';
 
 export default {
     name: "ArtistCoaching",
@@ -6,15 +7,26 @@ export default {
 
 
         return {
-
+            appearWithScroll
         }
+    },
+    methods: {
+        scrollFunction() {
+            const section = document.querySelector(".artist_coaching")
+            appearWithScroll(section)
+        }
+    },
+    mounted() {
+        this.scrollFunction()
+
     }
 }
+
 </script>
 
 
 <template>
-    <section class="artist_coaching p-3">
+    <section class="artist_coaching p-3 td_1s">
         <div class="container-lg d-flex justify-content-center align-items-center flex-column h-100 p-3">
 
             <div class="f_fasthand heavenly fs-1 z_index5">Artist Coaching</div>
@@ -68,7 +80,6 @@ export default {
 
 
 .artist_coaching {
-    // height: 600px;
     background-color: $clr_primary_light;
     background-image: url("../assets/img/images/maxcoach-shape-14-1536x343.png");
     background-size: contain;

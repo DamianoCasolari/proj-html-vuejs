@@ -43,8 +43,6 @@
 
     &:hover {
         background-color: $clr_left_spot;
-        // color: $clr_brackets;
-        // border: 2px solid $clr_brackets;
     }
 }
 
@@ -54,7 +52,9 @@
     transform: scale(0.85%);
 }
 
-
+.td_1s {
+    transition-duration: 1.5s;
+}
 
 // font-family: 'Fasthand', cursive;
 // font-family: 'Poppins', sans-serif;

@@ -1,6 +1,7 @@
 export const navbarHeaderInfo = [
     {
         title: "Home",
+        clicked: false,
         drops: {
             drop1: "cose",
             drop2: "cosine",
@@ -9,6 +10,7 @@ export const navbarHeaderInfo = [
     },
     {
         title: "Pages",
+        clicked: false,
         drops: {
             drop1: "cose",
             drop2: "cosine",
@@ -17,6 +19,7 @@ export const navbarHeaderInfo = [
     },
     {
         title: "Courses",
+        clicked: false,
         drops: {
             drop1: "cose",
             drop2: "cosine",
@@ -26,6 +29,7 @@ export const navbarHeaderInfo = [
     },
     {
         title: "Features",
+        clicked: false,
         drops: {
             drop1: "cose",
             drop2: "cosine",
@@ -34,6 +38,7 @@ export const navbarHeaderInfo = [
     },
     {
         title: "Blog",
+        clicked: false,
         drops: {
             drop1: "cose",
             drop2: "cosine",
@@ -42,6 +47,7 @@ export const navbarHeaderInfo = [
     },
     {
         title: "Shop",
+        clicked: false,
         drops: {
             drop1: "cose",
             drop2: "cosine",

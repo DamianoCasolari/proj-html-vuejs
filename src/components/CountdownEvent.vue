@@ -5,8 +5,27 @@ export default {
     name: "CountdownEvent",
     data() {
         return {
-            faClock
+            faClock,
+            timeLeft: '',
+            endDay: new Date(2023, 4, 5, 12, 0, 0),
         }
+    },
+    methods: {
+        startCountdown() {
+            setInterval(() => {
+                const currentTime = new Date().getTime();
+                const timeDiff = this.endDay - currentTime;
+                const daysLeft = String(Math.floor(timeDiff / (1000 * 60 * 60 * 24))).padStart(2, '0')
+                const hoursLeft = String(Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
+                const minutesLeft = String(Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60))
+                ).padStart(2, '0');
+                const secondsLeft = String(Math.floor((timeDiff % (1000 * 60)) / 1000)).padStart(2, '0');
+                this.timeLeft = `${daysLeft} : ${hoursLeft} : ${minutesLeft} : ${secondsLeft}`;
+            }, 1000);
+        },
+    },
+    mounted() {
+        this.startCountdown();
     }
 }
 </script>
@@ -23,17 +42,8 @@ export default {
             </span>
             <div class="counter">
                 <span>
-                    00 : 00 : 00 : 00
+                    {{ timeLeft }}
                 </span>
-                <!-- <span>
-                00 :
-            </span>
-            <span>
-                00 :
-            </span>
-            <span>
-                00
-            </span> -->
             </div>
         </div>
         <button class="juice_button">Get ticket</button>

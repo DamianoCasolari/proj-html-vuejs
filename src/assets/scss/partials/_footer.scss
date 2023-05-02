@@ -55,9 +55,13 @@ footer {
             transition-duration: 0.5s;
 
             &:hover {
-                background-color: orange;
+                background-color: $clr_italic_heavenly;
             }
 
+            & i {
+                transition-duration: 0.5s;
+
+            }
         }
     }
 }

@@ -1,12 +1,18 @@
 <script>
-import { linksFooterExplore, linksFooterInformation } from "../data/linksFooterInfo"
+import { linksFooterExplore, linksFooterInformation, IstragramInfo } from "../data/linksFooterInfo"
 
 export default {
     name: "SiteFooter",
     data() {
         return {
             linksFooterExplore,
-            linksFooterInformation
+            linksFooterInformation,
+            IstragramInfo
+        }
+    },
+    methods: {
+        getImagePath: function (name) {
+            return new URL(`/src/assets/img/images/${name}`, import.meta.url).href
         }
     }
 }
@@ -47,15 +53,15 @@ export default {
                 </div>
             </div>
 
-            <div class="info_right col-12 col-md-4">
-                <h5 class="title d-inline-block">Istragram </h5><span> @maxcoach</span>
+            <div class="info_right col-12 col-md-4" v-for="info in IstragramInfo">
+                <h5 class="title d-inline-block">{{ info.title }} </h5><span class="ms-2"> {{ info.tag }}</span>
                 <div class="img_container d-flex d-flex gap-3 flex-wrap">
-                    <a href="#"><img src="../assets/img/images/artist-course-06-480x480.jpg" alt="istragram_photo"></a>
-                    <a href="#"><img src="../assets/img/images/artist-course-07-480x480.jpg" alt="istragram_photo"></a>
-                    <a href="#"><img src="../assets/img/images/artist-course-02-480x480.jpg" alt="istragram_photo"></a>
+                    <a href="#" v-for="image in info.img"><img :src="getImagePath(image)" alt="istragram_photo"></a>
                 </div>
             </div>
         </div>
+
+        <!-- COPYRIGHT  -->
         <div class="bottom text-center my-3 position-relative"><i class="fa fa-copyright me-2" aria-hidden="true"></i>
             <span>Damiano Casolari</span>
             <a href="#top_page">

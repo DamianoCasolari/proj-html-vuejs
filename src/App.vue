@@ -27,14 +27,15 @@ export default {
 
 }
 
-
 </script>
 
 <template>
-  <CountdownEvent />
-  <SiteHeader />
-  <SiteMain />
-  <SiteFooter />
+  <div v-cloak>
+    <CountdownEvent />
+    <SiteHeader />
+    <SiteMain />
+    <SiteFooter />
+  </div>
 </template>
 
 <style lang="scss" scoped></style>

@@ -32,8 +32,6 @@
 
     }
 
-
-
     .left_side {
 
         height: 100%;
@@ -57,44 +55,31 @@
                 bottom: 0px;
                 left: 0px;
                 width: 350px;
-                // width: 70%;
             }
 
             .shape_abstract {
-                // bottom: 223px;
                 bottom: 36%;
-                // left: 250px;
                 left: 50%;
                 width: 250px;
-                // width: 50%;
             }
 
             .shape_space_kong {
-                // bottom: 77px;
                 bottom: 15%;
-                // left: 116px;
                 left: 23%;
                 width: 150px;
-                // width: 30%;
 
             }
 
             .shape_dotted {
-                // bottom: 77px;
                 bottom: 15%;
-                // left: 86px;
                 left: 17%;
                 width: 250px;
-                // width: 50%;
             }
 
             .shape_profile {
-                // bottom: -21px;
                 bottom: -3%;
-                // left: 389px;
                 left: 80%;
                 width: 214px;
-                // width: 45%;
             }
         }
     }
@@ -116,32 +101,27 @@
             img {
                 width: 100%;
                 position: absolute;
-                // transform: translateY(-100%);
             }
 
             .shape_abstract {
                 bottom: 5%;
                 right: 10%;
                 width: 350px;
-                // width: 70%;
+                transition: 1s;
             }
 
             .shape_feather {
-                // bottom: 223px;
                 bottom: 51%;
-                // right: 250px;
                 right: 24%;
                 width: 100px;
-                // width: 50%;
+                transition: 1s;
             }
 
             .shape_photo {
-                // bottom: 77px;
                 bottom: 15%;
-                // right: 116px;
                 right: 33%;
                 width: 250px;
-                // width: 30%;
+                transition: 1s;
 
             }
 
@@ -150,5 +130,18 @@
 
     }
 
+    @media screen and (max-width:576px) {
+        .shape_photo {
+            right: 14% !important;
+        }
+
+        .shape_feather {
+            right: 2% !important;
+        }
+
+        .shape_abstract {
+            right: 31% !important;
+        }
+    }
 
 }

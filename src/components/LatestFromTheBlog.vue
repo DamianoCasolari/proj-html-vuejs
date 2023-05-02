@@ -1,5 +1,7 @@
 <script>
 import { faCircle, faCalendar, faEye } from '@fortawesome/free-regular-svg-icons';
+import { appearWithScroll } from '../assets/js/utility_functions.js';
+
 
 
 export default {
@@ -11,8 +13,19 @@ export default {
         return {
             faCircle,
             faCalendar,
-            faEye
+            faEye,
+            appearWithScroll
         }
+    },
+    methods: {
+        scrollFunction() {
+            const section = document.querySelector(".blog_container")
+            appearWithScroll(section)
+        }
+    },
+    mounted() {
+        this.scrollFunction()
+
     }
 }
 </script>
@@ -20,7 +33,8 @@ export default {
 
 <template>
     <section class="blog_section p-3 d-flex justify-content-center align-items-center">
-        <div class="box container-lg d-flex justify-content-center align-items-center flex-column">
+        <div
+            class="box blog_container py-4 container-lg d-flex justify-content-center align-items-center flex-column td_1s">
 
             <!-- Title section  -->
             <div class="f_fasthand heavenly fs-1 z_index5">Articles and Tips</div>
