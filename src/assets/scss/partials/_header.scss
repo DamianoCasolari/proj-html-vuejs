@@ -12,6 +12,7 @@ header {
     z-index: 1000;
     transition-duration: 1.5s;
 
+
     .main_logo {
         width: 150px;
     }
@@ -60,7 +61,7 @@ header {
             background-image: url("../../assets/img/images/artist-shape-02-600x324\ -\ Copia.png"), url("../../assets/img/images/artist-hero-image-03-204x300.png");
             background-position: top right, bottom left;
             background-repeat: no-repeat, no-repeat;
-            border-radius: 20px 0 0 20px;
+            border-radius: 0 20px 0 0;
 
 
             .block_options {

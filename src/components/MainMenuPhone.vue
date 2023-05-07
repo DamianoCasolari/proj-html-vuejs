@@ -22,7 +22,7 @@ export default {
             <i class="fa-solid fa-bars"></i>
         </button>
 
-        <div class="offcanvas offcanvas-end position-absolute my_offcanvas" tabindex="-1" id="offcanvasWithBothOptions"
+        <div class="offcanvas offcanvas-start position-absolute my_offcanvas" tabindex="-1" id="offcanvasWithBothOptions"
             aria-labelledby="offcanvasWithBothOptionsLabel">
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title f_fasthand heavenly fs-1" id="offcanvasWithBothOptionsLabel">Menù</h5>

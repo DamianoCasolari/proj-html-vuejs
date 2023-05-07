@@ -3,6 +3,7 @@
 
 section.carouselle_section {
     background-color: $clr_lovesection_background;
+    overflow-x: hidden;
 
 
     .testimonials_slider {
